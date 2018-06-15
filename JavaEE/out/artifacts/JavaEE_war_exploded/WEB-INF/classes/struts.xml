@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name="struts.multipart.maxSize" value="52428800"/>
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <package name="default"  extends="struts-default">
+        <action name="AddGood" class="com.jelusalering.action.AddGoodAction" >
+            <result name="success" type="redirectAction">ShowGoods</result>
+            <result name="error">/admin_welcome.jsp</result>
+            <result name="login" type="redirect">/login.jsp</result>
+        </action>
+         <action name="AddUsers" class="com.jelusalering.action.AddUsersAction">
+             <result name="success" type="redirectAction">ShowUsers</result>
+             <result name="error">/admin_welcome.jsp</result>
+             <result name="login">/login.jsp</result>
+         </action>
+        <action name="AddCustomer" class="com.jelusalering.action.AddCustomer">
+            <result name="success" type="redirectAction">ShowCustomer</result>
+            <result name="error">/admin_welcome.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
+        <action name="ShowUsers" class="com.jelusalering.action.ShowUsersAction">
+           <result name="success">/UsersManage.jsp</result>
+            <result name="error">/admin_welcome.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
+        <action name="DelUsers" class="com.jelusalering.action.DelUsersAction">
+            <result name="success" type="redirectAction">ShowUsers</result>
+            <result name="error">/admin_welcome.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
+        <action name="ChangeUsers" class="com.jelusalering.action.ChangeUsersAction">
+            <result name="success">/ChangeUsers.jsp</result>
+            <result name="error">/admin_welcome.jsp</result>
+            <result name="login">/login.jsp</result>
+
+        </action>
+        <action name="UpdateUsers" class="com.jelusalering.action.UpdateUsers">
+            <result name="success" type="redirectAction" >ShowUsers</result>
+            <result name="error">/admin_welcome.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
+        <action name="ShowCustomer" class="com.jelusalering.action.ShowCustomerAction">
+            <result name="success">/CustomerManage.jsp</result>
+            <result name="error">/admin_welcome.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
+        <action name="DelCustomer" class="com.jelusalering.action.DelCustomerAction">
+            <result name="success" type="redirectAction">ShowCustomer</result>
+            <result name="error">/admin_welcome.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
+        <action name="ChangeGoods" class="com.jelusalering.action.ChangeGoodsAction">
+            <result name="success">/ChangeGoods.jsp</result>
+            <result name="error">/admin_welcome.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
+        <action name="ShowGoods" class="com.jelusalering.action.ShowGoodsAction">
+            <result name="success">/GoodsManage.jsp</result>
+            <result name="error">/admin_welcome.jsp</result>
+            <result name="login">/login.jsp</result>
+
+        </action>
+        <action name="DelGoods" class="com.jelusalering.action.DelGoodsAction">
+            <result name="success">/GoodsManage.jsp</result>
+            <result name="error">/admin_welcome.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
+        <action name="ChangeCustomer" class="com.jelusalering.action.ChangeCustomerAction">
+            <result name="success">/ChangeCustomer.jsp</result>
+            <result name="error">/admin_welcome.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
+        <action name="UpdateCustomer" class="com.jelusalering.action.UpdateCustomer">
+            <result name="success" type="redirectAction">ShowCustomer</result>
+            <result name="error">/admin_welcome.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
+        <action name="UpdateGoods" class="com.jelusalering.action.UpdateGoods">
+            <result name="success"  type="redirectAction">ShowGoods</result>
+            <result name="error">/admin_welcome.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
+        <action name="SelectCustomer" class="com.jelusalering.action.SelectCustomer">
+            <result name="success">/CustomerManage.jsp</result>
+            <result name="error" type="redirectAction">ShowCustomer</result>
+            <result name="login" type="redirect">/login.jsp</result>
+            <result name="input">/admin_welcome.jsp</result>
+        </action>
+        <action name="SelectGoods" class="com.jelusalering.action.SelectGoods">
+            <result name="success">/GoodsManage.jsp</result>
+            <result name="error" type="redirectAction">ShowGoods</result>
+            <result name="login" type="redirect">/login.jsp</result>
+            <result name="input">/admin_welcome.jsp</result>
+        </action>
+        <action name="Login" class="com.jelusalering.action.LoginAction">
+            <result name="success">/admin_welcome.jsp</result>
+            <result name="error">/login.jsp</result>
+        </action>
+     </package>
+</struts>

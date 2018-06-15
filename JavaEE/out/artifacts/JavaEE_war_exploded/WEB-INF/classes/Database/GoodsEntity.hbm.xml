@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Database.GoodsEntity" table="goods" schema="homework">
+        <id name="gcode">
+            <column name="g_code" sql-type="varchar(10)" length="10"/>
+        </id>
+        <property name="gname">
+            <column name="g_name" sql-type="varchar(50)" length="50"/>
+        </property>
+        <property name="gtype">
+            <column name="g_type" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="ggrand">
+            <column name="g_grand" sql-type="varchar(50)" length="50" not-null="true"/>
+        </property>
+        <property name="gunit">
+            <column name="g_unit" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="ginprice">
+            <column name="g_inprice" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="goutprice">
+            <column name="g_outprice" sql-type="varchar(10)" length="10"/>
+        </property>
+        <property name="gdescription">
+            <column name="g_description" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="gstoreNum">
+            <column name="g_storeNum" sql-type="int(11)"/>
+        </property>
+    </class>
+</hibernate-mapping>

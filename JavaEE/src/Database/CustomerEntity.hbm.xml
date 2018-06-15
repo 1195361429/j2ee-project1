@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Database.CustomerEntity" table="customer" schema="homework">
+        <id name="ccode">
+            <column name="c_code" sql-type="varchar(10)" length="10"/>
+        </id>
+        <property name="cname">
+            <column name="c_name" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="clinkphone">
+            <column name="c_linkphone" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="caddress">
+            <column name="c_address" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="cdescription">
+            <column name="c_description" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="cstate">
+            <column name="c_state" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
